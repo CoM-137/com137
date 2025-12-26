@@ -58,9 +58,11 @@ body {
 }
 
 .element-card:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-6px) scale(1.05);
     border-color: var(--accent);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), /* blue glow */
+                0 25px 25px -5px rgb(0 0 0 / 0.1),
+                0 10px 10px -5px rgb(0 0 0 / 0.05);
 }
 
 .atomic-num {
