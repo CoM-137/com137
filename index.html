@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collegium of Minds | Periodic Portfolio</title>
+    <meta name="description" content="A community of polymaths and curious minds exploring science, philosophy, and technology.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        serif: ['Merriweather', 'serif'],
+                        display: ['"JetBrains Mono"', 'monospace'],
+                        body: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-white dark:bg-[#020617] text-slate-900 dark:text-slate-100 font-serif selection:bg-blue-100 dark:selection:bg-blue-900/30 overflow-x-hidden transition-colors duration-500">
+    <!-- Atmospheric Background -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-400/10 dark:bg-blue-600/5 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute top-[20%] -right-[5%] w-[35%] h-[35%] bg-indigo-400/10 dark:bg-indigo-600/5 rounded-full blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[45%] h-[45%] bg-sky-400/10 dark:bg-sky-600/5 rounded-full blur-[150px] animate-pulse" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 py-12 md:py-20">
+        <!-- Theme Toggle -->
+        <div class="fixed top-6 right-6 z-50">
+            <button id="theme-toggle" class="p-3 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-lg hover:scale-110 transition-all duration-300 group" aria-label="Toggle dark mode">
+                <svg id="sun-icon" class="w-5 h-5 text-amber-500 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l.707-.707M6.343 17.657l-.707.707M17.657 17.657l.707.707M6.343 6.343l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"></path></svg>
+                <svg id="moon-icon" class="w-5 h-5 text-slate-700 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+        </div>
+
+        <header class="text-center mb-16 md:mb-24">
+            <div class="inline-block mb-6 relative group">
+                <div class="absolute inset-0 bg-blue-500/20 dark:bg-blue-400/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+                <img src="assets/logo.jpg" alt="The Collegium of Minds Logo" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-slate-900 shadow-2xl relative z-10 transition-transform duration-700 hover:rotate-3">
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-display font-bold mb-4 tracking-tighter text-slate-900 dark:text-white">
+                The <span class="text-blue-600 dark:text-blue-400">Collegium</span> of Minds
+            </h1>
+            
+            <div class="flex items-center justify-center gap-3 text-slate-500 dark:text-slate-400 font-mono text-sm md:text-base">
+                <span class="w-12 h-[1px] bg-slate-200 dark:bg-slate-800"></span>
+                <p class="tracking-widest uppercase">Think. Explore. Discover. 🧠✨</p>
+                <span class="w-12 h-[1px] bg-slate-200 dark:bg-slate-800"></span>
+            </div>
+
+            <p class="mt-8 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-light italic">
+                The Collegium of Minds welcomes individuals passionate about exploring science 🔬, mathematics ➗, philosophy 🧠, literature 📚, history 🏛️, technology 💻, arts 🎨, and beyond.
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto justify-items-center">
+            <!-- Row 1 -->
+            <!-- Contact Card -->
+            <a href="mailto:collegiumofminds@gmail.com" target="_blank" class="element-card bg-slate-50 dark:bg-slate-900/20 border-2 border-slate-200 dark:border-slate-800 group" style="--accent: #3b82f6;">
+                <div class="atomic-num">01</div>
+                <div class="atomic-mass">1.008</div>
+                <div class="symbol">Co</div>
+                <div class="element-name">Contact</div>
+                <div class="card-content">Reach out via Gmail to start a conversation.</div>
+            </a>
+
+            <!-- Guidelines Card -->
+            <a href="https://docs.google.com/document/d/1XoxcR-ZKuqt6kvdyBPiHqpQ1Y7T_tWgGbE90ewQCzKY/edit?usp=sharing" target="_blank" class="element-card bg-cyan-50/30 dark:bg-cyan-900/10 border-2 border-cyan-200 dark:border-cyan-800/50 group" style="--accent: #06b6d4;">
+                <div class="atomic-num">02</div>
+                <div class="atomic-mass">4.0026</div>
+                <div class="symbol">Gd</div>
+                <div class="element-name">Guidelines</div>
+                <div class="card-content">Read our community standards and shared values.</div>
+            </a>
+
+            <!-- Membership Card -->
+            <a href="https://forms.gle/fMna43xRijuqaLP8A" target="_blank" class="element-card bg-slate-50 dark:bg-slate-900/20 border-2 border-slate-200 dark:border-slate-800 group" style="--accent: #64748b;">
+                <div class="atomic-num">03</div>
+                <div class="atomic-mass">6.941</div>
+                <div class="symbol">Mb</div>
+                <div class="element-name">Membership</div>
+                <div class="card-content">Join our community and help us grow.</div>
+            </a>
+
+            <!-- Row 2 -->
+            <!-- YouTube Card -->
+            <a href="https://www.youtube.com/@TheCollegiumofMinds" target="_blank" class="element-card bg-red-50/30 dark:bg-red-900/10 border-2 border-red-200 dark:border-red-800/50 group" style="--accent: #ef4444;">
+                <div class="atomic-num">04</div>
+                <div class="atomic-mass">9.0122</div>
+                <div class="symbol">Yt</div>
+                <div class="element-name">YouTube</div>
+                <div class="card-content">Watch our latest talks and discussions.</div>
+            </a>
+
+            <!-- Medium Card -->
+            <a href="https://medium.com/@collegiumofminds" target="_blank" class="element-card bg-slate-50 dark:bg-slate-800/20 border-2 border-slate-300 dark:border-slate-700 group" style="--accent: #0f172a;">
+                <div class="atomic-num">05</div>
+                <div class="atomic-mass">10.811</div>
+                <div class="symbol">Me</div>
+                <div class="element-name">Medium</div>
+                <div class="card-content">Read articles and essays from our members.</div>
+            </a>
+
+            <!-- Substack Card -->
+            <a href="https://thecollegiumofminds.substack.com/" target="_blank" class="element-card bg-orange-50/30 dark:bg-orange-900/10 border-2 border-orange-200 dark:border-orange-800/50 group" style="--accent: #f97316;">
+                <div class="atomic-num">06</div>
+                <div class="atomic-mass">12.011</div>
+                <div class="symbol">Su</div>
+                <div class="element-name">Substack</div>
+                <div class="card-content">Join our newsletter for regular insights.</div>
+            </a>
+
+            <!-- Row 3 -->
+            <div class="hidden md:block"></div>
+            <!-- Website Card -->
+            <a href="https://collegium137.vercel.app" target="_blank" class="element-card bg-sky-50/30 dark:bg-sky-900/10 border-2 border-sky-200 dark:border-sky-800/50 group" style="--accent: #0ea5e9;">
+                <div class="atomic-num">07</div>
+                <div class="atomic-mass">14.007</div>
+                <div class="symbol">Ws</div>
+                <div class="element-name">Website</div>
+                <div class="card-content">Explore our main platform for resources.</div>
+            </a>
+            <div class="hidden md:block"></div>
+        </main>
+
+        <footer class="mt-24 pt-12 border-t border-slate-200 dark:border-slate-800 text-center">
+            <p class="font-mono text-xs tracking-widest uppercase text-slate-400 mb-2">
+                &copy; <span id="year"></span> The Collegium of Minds
+            </p>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-light">
+                A sanctuary for intellectual exploration and collective wisdom.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
