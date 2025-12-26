@@ -39,11 +39,10 @@
 }
 
 body {
-    background: radial-gradient(circle at top left, #a5f3fc, #fde68a, #fbcfe8, #c7d2fe, #fef3c7);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: background-color 0.5s, color 0.5s;
 }
-
 
 .element-card {
     position: relative;
