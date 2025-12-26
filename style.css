@@ -55,14 +55,13 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     overflow: hidden;
+    border-radius: 0.5rem; /* optional, gives slight rounded edges */
 }
 
 .element-card:hover {
-    transform: translateY(-6px) scale(1.05);
+    transform: translateY(-6px) scale(1.03); /* rise + slight scale */
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4), 0 6px 6px rgba(59, 130, 246, 0.2); /* blue glow */
     border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), /* blue glow */
-                0 25px 25px -5px rgb(0 0 0 / 0.1),
-                0 10px 10px -5px rgb(0 0 0 / 0.05);
 }
 
 .atomic-num {
