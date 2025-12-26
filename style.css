@@ -73,17 +73,6 @@ body {
     box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5), 0 10px 10px rgba(59, 130, 246, 0.3);
 }
 
-.element-card {
-  @apply relative w-64 h-64 p-6 flex flex-col items-center justify-center text-center rounded-xl transition-transform duration-300;
-  background: hsl(var(--card));
-  border: 2px solid hsl(var(--card-border));
-  backdrop-filter: blur(6px);
-}
-
-.element-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 25px rgba(59, 130, 246, 0.4), 0 10px 10px rgba(59, 130, 246, 0.2);
-}
 
 .atomic-num {
     position: absolute;
@@ -146,10 +135,6 @@ body {
     color: white;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.card-icon {
-  @apply flex items-center justify-center w-12 h-12 rounded-full mb-2 text-xl text-white;
 }
 
 /* Animations */
