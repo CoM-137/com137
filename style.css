@@ -128,7 +128,7 @@ body {
     color: #3b82f6;
     border: 2px solid #3b82f6;
     background: transparent;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
