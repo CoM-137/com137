@@ -125,11 +125,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #3b82f6;
-    border: 2px solid #3b82f6;
-    background: transparent;
+    color: #475569;
+    border: 2px solid #cbd5e1;
+    background: rgba(255,255,255,0.05);
     margin: 1.5rem 0 1rem 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .element-card:hover .card-icon {
