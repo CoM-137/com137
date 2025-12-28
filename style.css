@@ -139,7 +139,7 @@ body {
     object-fit: contain; 
     object-position: center; 
     display: block; 
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .element-card:hover .card-icon {
