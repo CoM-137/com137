@@ -133,10 +133,12 @@ body {
 }
 
 .card-icon img {
-    max-width: 70%;              /* scale proportionally inside circle */
+    max-width: 70%;
     max-height: 70%;
     object-fit: contain;
+    object-position: center;
     display: block;
+    margin: 0 auto;
 }
 
 .element-card:hover .card-icon {
