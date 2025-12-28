@@ -118,18 +118,16 @@ body {
 }
 
 .card-icon {
-    width: 3rem;                 /* fixed circle size */
+    width: 3rem;                 
     height: 3rem;
     border-radius: 50%;
-    border: 2px solid #cbd5e1;   /* subtle gray border */
-    align-items: center;
-    justify-content: center;
-    display: flex;               /* <-- use grid to perfectly center */
-    /*place-items: center;*/
-    margin-top: 0.5rem;          /* small gap above */
+    border: 2px solid #cbd5e1;
+    display: grid;
+    place-items: center;         /* perfectly centers any image/SVG */
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     background: rgba(255,255,255,0.05);
-    overflow: hidden;            /* ensures SVG stays contained */
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -137,9 +135,6 @@ body {
     max-width: 70%; 
     max-height: 70%; 
     object-fit: contain; 
-    object-position: center; 
-    display: block; 
-    margin: 0 auto;
 }
 
 .element-card:hover .card-icon {
