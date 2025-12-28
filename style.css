@@ -118,23 +118,23 @@ body {
 }
 
 .card-icon {
-    width: 3rem;
+    width: 3rem;                 /* fixed circle size */
     height: 3rem;
     border-radius: 50%;
-    border: 2px solid #cbd5e1;       /* subtle gray border */
+    border: 2px solid #cbd5e1;   /* subtle gray border */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.75rem;             /* small gap from text above */
+    margin-top: 0.5rem;          /* small gap above */
     margin-bottom: 1rem;
-    background: rgba(255,255,255,0.05); /* subtle background */
-    overflow: hidden;                /* keep logo contained */
+    background: rgba(255,255,255,0.05);
+    overflow: hidden;            /* ensures SVG stays contained */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-icon img {
-    width: 60%;     /* scale proportionally inside circle */
-    height: 60%;
+    max-width: 70%;              /* scale proportionally inside circle */
+    max-height: 70%;
     object-fit: contain;
     display: block;
 }
