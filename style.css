@@ -121,16 +121,22 @@ body {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    border: 2px solid #cbd5e1;       /* subtle gray border */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: #475569;
-    border: 2px solid #cbd5e1;
-    background: rgba(255,255,255,0.05);
-    margin: 1.5rem 0 1rem 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 0.75rem;             /* small gap from text above */
     margin-bottom: 1rem;
+    background: rgba(255,255,255,0.05); /* subtle background */
+    overflow: hidden;                /* keep logo contained */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon img {
+    width: 60%;     /* scale proportionally inside circle */
+    height: 60%;
+    object-fit: contain;
+    display: block;
 }
 
 .element-card:hover .card-icon {
