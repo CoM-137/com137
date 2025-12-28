@@ -133,12 +133,16 @@ body {
 }
 
 .card-icon img {
-    max-width: 70%;
+    width: auto;          /* let aspect ratio determine width */
+    height: 60%;          /* scale the image nicely inside the circle */
+    max-width: 70%;       /* fallback for very wide SVGs */
     max-height: 70%;
     object-fit: contain;
-    object-position: center;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;       /* horizontal centering */
+    position: relative;   /* ensures translate works if needed */
+    top: 50%;             /* vertical centering */
+    transform: translateY(-50%); /* perfectly center vertically */
 }
 
 .element-card:hover .card-icon {
